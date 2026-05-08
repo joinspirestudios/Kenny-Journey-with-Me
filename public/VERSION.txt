@@ -1,8 +1,11 @@
-v3.3 — full music for all 13 pages, adventures + firsts corrected
-build: 2026-05-08 18:20
+v4.0 — final ship
+build: 2026-05-08
 
-Audio fixed:
-- Adventures = Adekunle Gold (was incorrectly Teni-Zion)
-- Firsts     = Teni ft Olamide — Zion (correct slot now)
-- Origin     = Sienna Spiro — You Stole The Show (newly added)
-- Puzzle     = John Legend ft Faouzia — Minefields (newly added)
+- All copy personalized per Joseph's edits (intro, chapters, timeline, long message, proposal trap)
+- Long message expanded to 7 paragraphs
+- Intro music now plays (was disabled by an iOS-autoplay safety; removed)
+- Chapter 3 & 4 split layout matches BLANK reference:
+  * thin top bar (~80px), no more dark band above panels
+  * panels fill calc(100vh - 80px) — flush to viewport edges
+  * thumb strip has no glass pill — clean thumbs floating
+  * numbers (01, 02, 03...) appear BELOW each thumb, italic gold-soft
