@@ -1,0 +1,6 @@
+v3.0 — portrait video hero + marquee chapters + split panels w/ click-swap
+build: 2026-05-08
+
+To verify this version is live, open: <your-vercel-url>/VERSION.txt
+If you see this exact text, the new version is deployed.
+If not, force a rebuild on Vercel and clear your browser cache.
