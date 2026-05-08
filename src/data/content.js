@@ -3,19 +3,17 @@
 export const introCopy = {
   preName: 'For',
   name: 'Kenny',
-  line: 'A year, written down. Headphones on, please.',
+  line: "Hi Fish, It's already a year of getting to know each other again, Let Visit Year One Wrapped. Headphones on, please.",
   cta: 'Begin'
 }
 
 // Hero portrait videos — play muted, looped, behind the "Kenny" title.
-// 3 portrait videos arranged as a triptych.
 export const heroVideos = [
   '/media/hero/img-5253.mp4',
   '/media/hero/img-5252.mp4',
   '/media/hero/img-5250.mp4'
 ]
 
-// Helper to build a media item — { src, type, label }
 const img = (src, label = '') => ({ src, type: 'image', label })
 const vid = (src, label = '') => ({ src, type: 'video', label })
 
@@ -27,8 +25,8 @@ export const chapters = [
     eyebrow: 'Chapter One',
     title: 'How we found <em>each other</em>',
     body: [
-      "There's a version of every love story where you can pinpoint the exact moment everything changed. Ours has more than one.",
-      "Before the first date, before the first kiss, there was something quieter — a feeling that the room got smaller when you walked into it."
+      "There's always a version of every love story where you can always pinpoint the exact moment everything started or changed. Our love had multiple points that brought us together.",
+      "Before our first date, before even our first kiss, there was something more quiet: the peace I found in you as a best friend"
     ],
     closingLine: "I knew. I think I always knew.",
     date: '2022 — early 2024',
@@ -59,10 +57,10 @@ export const chapters = [
     eyebrow: 'Chapter Two',
     title: 'Our <em>firsts</em>',
     body: [
-      "I told you I loved you on June 3rd. I didn't kiss you until June 18th. Fifteen days of meaning it before I could prove it.",
-      "First date — March 15th. First trip. First time you met my people. First time I met yours. A whole calendar of new things, all of them with you in them."
+      "I told you I loved you on June 3rd. Do you remember? I not only meant it, but I've always wanted to prove it to you.",
+      "This is a Collection of our First date — March 15th. First trip. First time you met my people. First time I met yours. A whole calendar of new things, all of them with you in them."
     ],
-    closingLine: "You laughed for ten minutes straight that night. I think that's when I knew.",
+    closingLine: "Hey Baby, Your beautiful smile is the Reason why everyone in this Collection is Smiling",
     date: '15 March 2025 — onwards',
     media: [
       img('/media/firsts/first-picture-2025.jpg', 'First picture, 2025'),
@@ -87,12 +85,12 @@ export const chapters = [
     id: 'adventures',
     number: 'V',
     eyebrow: 'Chapter Five',
-    title: 'The places we <em>went</em>',
+    title: 'This Collection is filled with places we <em>went</em>',
     body: [
-      "House hunting like we already knew. First staycation. The selfies in lobbies you said we didn't need. We needed them.",
-      "Every trip a small experiment in being a us. Every trip we passed."
+      "House Parties, Dates, Trips, Karaoke. First staycation. The selfies in lobbies you said we didn't need. We needed them.",
+      "We have barely experienced the world together, I Promise This year we would go on more Trips together."
     ],
-    closingLine: "You make Sundays feel like something.",
+    closingLine: "We Have to Experience Multiple Modes of Transport Together (Eg: Travelling on A Yacht).",
     date: 'A year of small expeditions',
     media: [
       img('/media/adventures/our-first-staycation.jpg', 'Our first staycation'),
@@ -122,11 +120,11 @@ export const chapters = [
     eyebrow: 'Chapter Six',
     title: 'The <em>hard</em> ones',
     body: [
-      "There were nights it didn't go well. The first big fight. The first time we didn't know if we were going to make it. The version of us in 2023 that didn't.",
-      "And here we are anyway. Bruised, honest, still choosing this. The fights aren't the story. The coming back is."
+      "There were days I wasn't sure we would make it through the next week. This collection is filled with our first fight. The first time we didn't know if we were going to make it. The version of us in 2023 that didn't.",
+      "And here we are anyway. Not Perfect Yet, honest, still choosing this. The fights aren't the story. The coming back is."
     ],
-    closingLine: "Love isn't the absence of hard nights. It's what happens the morning after.",
-    date: 'The ones we don\'t talk about — and the one tonight',
+    closingLine: "Our Love isn't the absence of hard nights. It's the courage to keep building ourselves to where we want that counts.",
+    date: "The ones we don't talk about and the one tonight",
     media: [
       img('/media/hard/last-date-2023-1-before-we-broke-up-the-first-time.jpg', 'Last date, 2023 — before we broke up the first time'),
       img('/media/hard/last-date-2023-2-before-we-broke-up-the-first-time.jpg', ''),
@@ -143,7 +141,6 @@ export const chapters = [
 ]
 
 // Video 6 layout — split-screen with two big panels + center thumb strip
-// Click any thumb to swap it into a big panel; click a big panel to open fullscreen.
 export const splitChapters = [
   {
     id: 'her-beauty',
@@ -151,12 +148,10 @@ export const splitChapters = [
     eyebrow: 'Chapter Three',
     title: 'Her <em>beauty</em>',
     body: [
-      "This chapter is just for you. The way you tilt your head when you're thinking. The pineapple. The glasses. The way you look at me when you forget I'm looking back."
+      "This chapter is a Mirror for you My Badiraaa. The beautiful smile on your face. Your Aura. and Your Lips. This Collection is to remind you that You are beautiful, You Are Awesome, You Are Sweet, and You Should Love Yourself More."
     ],
     closingLine: "The most beautiful thing in any room you walk into is you.",
     date: 'Every single day',
-    // The full pool — the two big panels start with the first two; clicking
-    // a thumb swaps that thumb into the active panel slot.
     panels: [
       img('/media/her-beauty/she-glows-in-the-dark.jpg', 'she glows in the dark'),
       img('/media/her-beauty/img-8076-copy.jpg', 'soft light'),
@@ -177,7 +172,7 @@ export const splitChapters = [
       img('/media/her-beauty/41116ce3-d70a-446d-b411-cfb66bf659fd.jpg', 'unnamed ii'),
       vid('/media/her-beauty/in-the-wind.mp4', 'in the wind')
     ],
-    clueLabel: 'the pineapple'
+    clueLabel: 'I want To show you off to the world My Loveeeeee'
   },
   {
     id: 'us',
@@ -185,11 +180,11 @@ export const splitChapters = [
     eyebrow: 'Chapter Four',
     title: 'The shape of <em>us</em>',
     body: [
-      "There's a version of me that exists only when you're in the room. Softer. Slower. More honest. I like him better than the one I bring everywhere else.",
-      "We made a small private language out of a year — pineapple, fish, the handshake nobody else knows. It's the smallest thing and the biggest one."
+      "Baby, You've made me see a lot of possibilities, You have made me to want more, You have built me to aspire to be better than I thought I could, Baby you're a very important piece of Me.",
+      "This Collection has some of our language used in a year: pineapple, fish, our custom handshake. It's the smallest thing and the biggest one."
     ],
-    closingLine: "Whatever this is, it's mine to protect. Ours.",
-    date: 'Year one and counting',
+    closingLine: "Whatever this is, it's mine to protect and I'll fight to grow, nurture and protect Us.",
+    date: 'Year one and counting My Lovee',
     panels: [
       img('/media/us/our-first-christmas.jpg', 'our first christmas'),
       img('/media/us/first-marathon-together.jpg', 'first marathon together'),
@@ -213,29 +208,26 @@ export const splitChapters = [
       vid('/media/us/video-2026-05-08-04-37-00.mp4', 'a clip'),
       vid('/media/us/video-2026-05-08-04-37-31.mp4', 'another')
     ],
-    clueLabel: 'a song that\'s ours'
+    clueLabel: "a song that's ours"
   }
 ]
 
-// Timeline of Kenny's life — auto-scrolls horizontally, hover pauses, click opens detail.
-// Each event uses one of Joseph's uploaded year-tagged photos as the card image.
-// Edit captions (`title`, `body`) freely as Kenny adds context.
 export const timelineEvents = [
-  { year: 2003, image: '/media/timeline/2003.jpg', title: 'A girl arrives in Lagos', body: 'You start.', color: 'oxblood' },
+  { year: 2003, image: '/media/timeline/2003.jpg', title: 'A queen was born', body: 'Queen Awe.', color: 'oxblood' },
   { year: 2012, image: '/media/timeline/2012.jpg', title: 'Nine years old', body: 'Already with that look.', color: 'sand' },
-  { year: 2015, image: '/media/timeline/2015.jpg', title: 'Twelve', body: 'On the cusp of something.', color: 'cream' },
-  { year: 2016, image: '/media/timeline/2016.jpg', title: 'Thirteen', body: 'The year the world started to make sense.', color: 'oxblood' },
-  { year: 2017, image: '/media/timeline/2017.jpg', title: 'Fourteen', body: 'Becoming.', color: 'sand' },
-  { year: 2018, image: '/media/timeline/2018.jpg', title: 'Fifteen', body: 'Already her.', color: 'cream' },
+  { year: 2015, image: '/media/timeline/2015.jpg', title: 'Twelve', body: '', color: 'cream' },
+  { year: 2016, image: '/media/timeline/2016.jpg', title: 'Thirteen', body: '', color: 'oxblood' },
+  { year: 2017, image: '/media/timeline/2017.jpg', title: 'Fourteen', body: '', color: 'sand' },
+  { year: 2018, image: '/media/timeline/2018.jpg', title: 'Fifteen', body: '', color: 'cream' },
   { year: 2019, image: '/media/timeline/2019.jpg', title: 'Sixteen', body: 'A version I never met.', color: 'oxblood' },
-  { year: 2020, image: '/media/timeline/2020.jpg', title: 'Seventeen', body: 'The year everything stopped.', color: 'sand' },
-  { year: 2021, image: '/media/timeline/2021_2.jpg', title: 'Eighteen', body: 'When the world reopened.', color: 'cream' },
+  { year: 2020, image: '/media/timeline/2020.jpg', title: 'Seventeen', body: 'The year your mind grew.', color: 'sand' },
+  { year: 2021, image: '/media/timeline/2021_2.jpg', title: 'Eighteen', body: '', color: 'cream' },
   { year: 2022, image: '/media/timeline/2022_4.jpg', title: 'Nineteen', body: 'When our paths first crossed.', color: 'oxblood' },
   { year: 2023, image: '/media/timeline/2023.jpg', title: 'Twenty', body: 'First time we tried. First time we ended.', color: 'oxblood' },
-  { year: 2024, image: '/media/timeline/2024.jpg', title: 'Twenty-one', body: 'Finding your way back.', color: 'sand' },
+  { year: 2024, image: '/media/timeline/2024.jpg', title: 'Twenty-one', body: 'The year you found Joy.', color: 'sand' },
   { year: 2025, image: '/media/timeline/2025.jpg', title: 'Twenty-two', body: 'March 15. The day everything restarted.', color: 'gold' },
   { year: 2026, image: '/media/timeline/2026.jpg', title: 'Twenty-three', body: 'Year one. Where we are now.', color: 'gold' },
-  { year: '...', title: 'Everything next', body: 'Every win, every line, every "I told you so" — written here, in time.', color: 'cream' }
+  { year: '...', title: 'Everything next', body: 'You would Win, You Would Be Great, and This record would update itself yearly with your achievements.', color: 'cream' }
 ]
 
 export const friends = [
@@ -251,17 +243,18 @@ export const herLetters = [
 ]
 
 export const longMessage = {
-  eyebrow: 'For Kenny — read slowly',
+  eyebrow: 'For Awesome Kenny — read slowly',
   title: 'Everything I should have said <em>out loud</em>',
   paragraphs: [
-    "I'm not good at saying things in the moment. You've noticed. Half the things I feel about you only ever make it to a notes app at 2 a.m., and even then I delete the soft parts before morning.",
-    "So this is me saying them properly, in the place I'm best — written down, taking my time, knowing you'll read it more than once.",
-    "You changed the texture of my year. I notice things now I didn't notice before. I make decisions differently. There's a small voice in the back of my head that asks what you'd think, and I'm grateful for it — it makes me a person I like better.",
-    "Tonight didn't go the way either of us wanted. And I sat down after, and I kept building. Because none of it changes what I came here to say, and none of it changes that I'd choose this — choose you — again.",
-    "A year in, knowing what I know now, all of it: yes."
+    "Hey Baby, Hey Pineapple, Hi My Love.",
+    "Happy 1 Year Anniversary to Us Baby. This year has been filled with a rollercoaster of emotions — Joy, Laughter, Tears, Sadness, Happiness, Dreams, Ups, Downs, Efforts and Results — and We were with each other through it all. We have supported and patted each other on the back and put each other together. Thank You Baby.",
+    "I don't know if I've told you this before, but one interesting thing that stood out early on to me in our relationship is you actively introducing me to everyone you know. It showed me how much you were proud of me and us being together, and that has been my constant motivating reminder that I can't let you down, I can't let us down. And to say I'm proud of you is a freaking understatement — I wanna shout you out on the biggest global stage. I'm so much more proud of all you are Baby, and to the ends of the earth, I want to support you to make sure that bigger than you imagine to achieve, you get it. PS: I told you on your birthday you are getting to 200k followers by the end of this year — hi, I hope you're counting down.",
+    "Baby you've been with me at my lowest, and I wanna take you together with Me to the Peak of Life. We Will Win. We Are Not Losers. We Have Not Come This Far To Lose, Neither Have We Come This Far To Settle. You Will Win. I Will Win. and We would be Great Together.",
+    "Honestly, More than I can currently appreciate and reciprocate, Thank You so much Babe — for all the support, love, emotional comfort and even entertaining all my ambitious ideas. I promise you that in this new phase of our life I shall execute more radically and we will win and get to our 500m/year faster. Thank You so much for being there for me, for us, for trusting Me, for riding with Me. Thank You for Committing to the first year, and Looking forward to the greatness we achieve in this new phase of our relationship.",
+    "Hey Baby, oh Sorry — Hey Gym Partner, we are hitting the gym back and I promise to be the gym buddy you want in a partner. In This New Phase I'll work harder to make sure I can fully accommodate all your taste and even give you much better taste — More Trips, More Vacations, and shaking Your ass on a Yacht. This is that Year for Us Baby.",
+    "Hey Pineapple, Thank You So Much for sharing a Chapter of Life with Me. Looking forward to our new Phase Of Life together Baby."
   ],
-  signoff: '— Always, J.',
-  // Pulled from /quiet/ folder — Joseph's intimate captioned shots
+  signoff: '— Always, Joseph, Your Badiraaa.',
   orbitPhotos: [
     '/media/quiet/l01f602-my-pineapple.jpg',
     '/media/quiet/my-baby.jpg',
@@ -309,7 +302,7 @@ export const pageOrder = [
 export const cluePages = ['origin', 'firsts', 'her-beauty', 'us', 'timeline', 'adventures', 'hard', 'friends', 'letters', 'message']
 
 export const extraClues = {
-  timeline: 'a year that wasn\'t mine to keep',
+  timeline: "a year that wasn't mine to keep",
   friends: 'something a friend said',
   letters: 'a line you wrote me',
   message: 'the part that made you cry'

@@ -100,14 +100,14 @@ function Petals() {
 const trapStages = [
   {
     title: 'Are you <em>sure?</em>',
-    sub: "I drew flowers in code for you. I built ten pages. Click again. Carefully.",
+    sub: "you don't want to rethink that choice.",
     noText: "Yes I'm sure",
     yesText: 'Wait, actually yes',
     yesClass: ''
   },
   {
     title: 'But have you <em>considered</em>:',
-    sub: "the pineapple. fish. our handshake. me, kneeling, with a rose in my mouth (technically). all of march fifteenth.",
+    sub: "don't you wanna shake your ass on a yacht.",
     noText: "I considered. still no.",
     yesText: 'Okay fine, yes',
     yesClass: 'trap__yes--bigger'

@@ -7,7 +7,6 @@ function posterFor(videoSrc) {
   return videoSrc.replace(/\.mp4$/, '-poster.jpg')
 }
 
-// Big panel: image OR video that autoplays (only 2 visible at once = OK for iOS)
 function PanelMedia({ item }) {
   if (!item) return null
   if (item.type === 'video') {
@@ -33,7 +32,6 @@ function PanelMedia({ item }) {
   )
 }
 
-// Thumb: just shows poster image for videos (no autoplay — too many tiles)
 function ThumbMedia({ item }) {
   if (!item) return null
   if (item.type === 'video') {
@@ -59,6 +57,9 @@ function ThumbMedia({ item }) {
   )
 }
 
+// Video 6 layout: thin top bar + two big panels filling viewport + center thumb strip.
+// Click a thumb to swap into one of the big panels (alternates left/right).
+// Click either big panel to open fullscreen.
 export default function SplitChapter({ chapter, onCollectClue, collected, onContinue }) {
   const [activeIdx, setActiveIdx] = useState([0, 1])
   const [nextSlot, setNextSlot] = useState(0)
@@ -80,9 +81,9 @@ export default function SplitChapter({ chapter, onCollectClue, collected, onCont
     <section className="section split">
       <motion.div
         className="split__head"
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2, ease: [0.65, 0, 0.35, 1] }}
+        transition={{ duration: 1.0, ease: [0.65, 0, 0.35, 1] }}
       >
         <p className="eyebrow">{chapter.eyebrow} · {chapter.number}</p>
         <h2 className="split__title" dangerouslySetInnerHTML={{ __html: chapter.title }} />
@@ -120,24 +121,29 @@ export default function SplitChapter({ chapter, onCollectClue, collected, onCont
           )}
         </button>
 
+        {/* Thumb strip — no glass pill, numbers below each thumb */}
         <div className="split__thumbs">
           {all.map((item, i) => {
             const isActive = activeIdx.includes(i)
             return (
-              <motion.button
+              <motion.div
                 key={i}
-                type="button"
-                className={`split__thumb ${isActive ? 'split__thumb--active' : ''}`}
-                onClick={(e) => { e.stopPropagation(); swapIn(i) }}
-                onDoubleClick={(e) => { e.stopPropagation(); setPreview(item) }}
-                initial={{ opacity: 0, y: 12 }}
+                className="split__thumb-wrap"
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.9 + i * 0.04 }}
-                aria-label={item.label}
               >
-                <ThumbMedia item={item} />
+                <button
+                  type="button"
+                  className={`split__thumb ${isActive ? 'split__thumb--active' : ''}`}
+                  onClick={(e) => { e.stopPropagation(); swapIn(i) }}
+                  onDoubleClick={(e) => { e.stopPropagation(); setPreview(item) }}
+                  aria-label={item.label}
+                >
+                  <ThumbMedia item={item} />
+                </button>
                 <span className="split__thumb-num">{String(i + 1).padStart(2, '0')}</span>
-              </motion.button>
+              </motion.div>
             )
           })}
         </div>

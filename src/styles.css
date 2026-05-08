@@ -444,27 +444,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: clamp(28px, 4vh, 50px) var(--pad) clamp(14px, 2vh, 24px);
+  gap: 6px;
+  padding: 16px var(--pad) 14px;
   max-width: 800px;
   margin: 0 auto;
+  flex-shrink: 0;
 }
 
 .split__title {
   font-family: var(--f-display);
   font-weight: 300;
-  font-size: clamp(40px, 6.5vw, 72px);
-  line-height: 0.95;
-  letter-spacing: -0.025em;
+  font-size: clamp(22px, 3.4vw, 34px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
   color: var(--c-cream);
 }
 .split__title em { font-family: var(--f-italic); font-style: italic; color: var(--c-gold); }
 
-/* The split-screen stage — two big panels side by side, fills most of viewport */
+/* The split-screen stage — fills viewport minus the thin head bar */
 .split__stage {
   position: relative;
   width: 100%;
-  height: clamp(520px, 80vh, 900px);
+  height: calc(100vh - 80px);
+  height: calc(100svh - 80px);
+  min-height: 460px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -524,61 +527,58 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
-/* Center thumb strip — scrollable, sits over both panels */
+/* Center thumb strip — clean, no glass pill, numbers below each thumb (BLANK reference) */
 .split__thumbs {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-  gap: 6px;
+  gap: 10px;
   z-index: 5;
-  padding: 8px;
-  background: rgba(26, 10, 10, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(201, 166, 107, 0.3);
-  border-radius: 4px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
-  max-width: min(calc(100% - 40px), 720px);
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  max-width: min(calc(100% - 40px), 760px);
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   scrollbar-width: thin;
   scrollbar-color: rgba(201, 166, 107, 0.4) transparent;
+  padding-bottom: 22px; /* room for the number labels */
 }
 
-.split__thumbs::-webkit-scrollbar { height: 6px; }
+.split__thumbs::-webkit-scrollbar { height: 4px; }
 .split__thumbs::-webkit-scrollbar-track { background: transparent; }
-.split__thumbs::-webkit-scrollbar-thumb { background: rgba(201, 166, 107, 0.3); border-radius: 3px; }
+.split__thumbs::-webkit-scrollbar-thumb { background: rgba(201, 166, 107, 0.3); border-radius: 2px; }
+
+.split__thumb-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
 
 .split__thumb {
   position: relative;
   width: clamp(54px, 6.5vw, 80px);
   height: clamp(54px, 6.5vw, 80px);
-  flex-shrink: 0;
   background: var(--c-oxblood-deep);
   overflow: hidden;
   cursor: pointer;
   transition: all 0.4s var(--ease-cinematic);
   border-radius: 2px;
-  border: 1px solid transparent;
+  border: 1px solid rgba(245, 239, 230, 0.15);
   padding: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
-.split__thumb:hover { transform: translateY(-4px) scale(1.06); z-index: 6; border-color: rgba(201, 166, 107, 0.5); }
+.split__thumb:hover { transform: translateY(-3px) scale(1.06); border-color: rgba(201, 166, 107, 0.6); }
 
 .split__thumb--active {
   border-color: var(--c-gold);
-  box-shadow: 0 0 0 2px rgba(201, 166, 107, 0.4);
-}
-
-.split__thumb--active::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(201, 166, 107, 0.2);
-  pointer-events: none;
-  z-index: 2;
+  box-shadow: 0 0 0 1px var(--c-gold), 0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
 .split__thumb img, .split__thumb video {
@@ -588,27 +588,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .split__thumb-num {
-  position: absolute;
-  bottom: 4px;
-  right: 6px;
   font-family: var(--f-display);
   font-style: italic;
-  font-size: 9px;
-  color: var(--c-cream);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-  letter-spacing: 0.1em;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.split__hint {
-  text-align: center;
   font-size: 11px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--c-sand-dim);
-  opacity: 0.5;
-  padding: 0 var(--pad);
+  color: var(--c-cream-dim);
+  letter-spacing: 0.16em;
+  pointer-events: none;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 /* Mobile: stack panels vertically; thumb strip goes between */
@@ -625,6 +611,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     transform: none;
     margin: 0 auto;
     max-width: calc(100% - 24px);
+    padding-bottom: 22px;
   }
 }
 

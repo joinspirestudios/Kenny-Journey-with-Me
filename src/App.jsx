@@ -121,7 +121,8 @@ export default function App() {
         </motion.div>
       </AnimatePresence>
 
-      <AudioController enabled={pageIdx > 0} pageKey={current.key} />
+      {/* Audio is always on. On iOS, the pill shows "tap to play music" until first tap. */}
+      <AudioController enabled={true} pageKey={current.key} />
     </div>
   )
 }
