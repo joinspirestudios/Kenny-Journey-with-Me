@@ -217,16 +217,24 @@ export const splitChapters = [
   }
 ]
 
+// Timeline of Kenny's life — auto-scrolls horizontally, hover pauses, click opens detail.
+// Each event uses one of Joseph's uploaded year-tagged photos as the card image.
+// Edit captions (`title`, `body`) freely as Kenny adds context.
 export const timelineEvents = [
-  { year: 2003, title: 'A girl arrives in Lagos', body: 'You start.', color: 'oxblood' },
-  { year: 2008, title: 'First memory', body: '(she will tell you what to put here.)', color: 'sand' },
-  { year: 2012, title: 'A school year that mattered', body: '...', color: 'cream' },
-  { year: 2016, title: 'A turning point', body: '...', color: 'oxblood' },
-  { year: 2019, title: 'A version of you I never met', body: '...', color: 'sand' },
-  { year: 2021, title: 'Becoming who you are', body: '...', color: 'cream' },
-  { year: 2023, title: 'The first time we tried', body: 'And the first time we ended.', color: 'oxblood' },
-  { year: 2025, title: 'We tried again, properly', body: 'March 15. The day everything restarted.', color: 'gold' },
-  { year: 2026, title: 'Year one', body: 'Where we are now. Where this site lives.', color: 'gold' },
+  { year: 2003, image: '/media/timeline/2003.jpg', title: 'A girl arrives in Lagos', body: 'You start.', color: 'oxblood' },
+  { year: 2012, image: '/media/timeline/2012.jpg', title: 'Nine years old', body: 'Already with that look.', color: 'sand' },
+  { year: 2015, image: '/media/timeline/2015.jpg', title: 'Twelve', body: 'On the cusp of something.', color: 'cream' },
+  { year: 2016, image: '/media/timeline/2016.jpg', title: 'Thirteen', body: 'The year the world started to make sense.', color: 'oxblood' },
+  { year: 2017, image: '/media/timeline/2017.jpg', title: 'Fourteen', body: 'Becoming.', color: 'sand' },
+  { year: 2018, image: '/media/timeline/2018.jpg', title: 'Fifteen', body: 'Already her.', color: 'cream' },
+  { year: 2019, image: '/media/timeline/2019.jpg', title: 'Sixteen', body: 'A version I never met.', color: 'oxblood' },
+  { year: 2020, image: '/media/timeline/2020.jpg', title: 'Seventeen', body: 'The year everything stopped.', color: 'sand' },
+  { year: 2021, image: '/media/timeline/2021_2.jpg', title: 'Eighteen', body: 'When the world reopened.', color: 'cream' },
+  { year: 2022, image: '/media/timeline/2022_4.jpg', title: 'Nineteen', body: 'When our paths first crossed.', color: 'oxblood' },
+  { year: 2023, image: '/media/timeline/2023.jpg', title: 'Twenty', body: 'First time we tried. First time we ended.', color: 'oxblood' },
+  { year: 2024, image: '/media/timeline/2024.jpg', title: 'Twenty-one', body: 'Finding your way back.', color: 'sand' },
+  { year: 2025, image: '/media/timeline/2025.jpg', title: 'Twenty-two', body: 'March 15. The day everything restarted.', color: 'gold' },
+  { year: 2026, image: '/media/timeline/2026.jpg', title: 'Twenty-three', body: 'Year one. Where we are now.', color: 'gold' },
   { year: '...', title: 'Everything next', body: 'Every win, every line, every "I told you so" — written here, in time.', color: 'cream' }
 ]
 
@@ -267,19 +275,19 @@ export const longMessage = {
 }
 
 export const audioTracks = {
-  intro: { src: '/media/audio/intro.mp3', title: 'Intro' },
-  origin: { src: '/media/audio/origin.mp3', title: 'How we found each other' },
-  firsts: { src: '/media/audio/firsts.mp3', title: 'Sabrina Carpenter — Looking at Me' },
-  'her-beauty': { src: '/media/audio/her-beauty.mp3', title: 'Ayra Starr — All the Love' },
-  us: { src: '/media/audio/us.mp3', title: 'Ours' },
-  timeline: { src: '/media/audio/timeline.mp3', title: 'Her years' },
-  adventures: { src: '/media/audio/adventures.mp3', title: 'Davido — La La' },
-  hard: { src: '/media/audio/hard.mp3', title: 'A quieter song' },
-  puzzle: { src: '/media/audio/puzzle.mp3', title: 'Davido — 1 Milli' },
-  friends: { src: '/media/audio/friends.mp3', title: 'Naira Marley — Opotoyi' },
-  letters: { src: '/media/audio/letters.mp3', title: 'Her words' },
-  message: { src: '/media/audio/message.mp3', title: 'Mine' },
-  proposal: { src: '/media/audio/proposal.mp3', title: 'Yes' }
+  intro: { src: '/media/audio/intro.mp3', title: 'Davido ft CKay — La La' },
+  origin: { src: '/media/audio/origin.mp3', title: 'Sienna Spiro — You Stole The Show' },
+  firsts: { src: '/media/audio/firsts.mp3', title: 'Teni ft Olamide — Zion' },
+  'her-beauty': { src: '/media/audio/her-beauty.mp3', title: 'Davido — 10 Kilo' },
+  us: { src: '/media/audio/us.mp3', title: 'Sienna Spiro — Die On This Hill' },
+  timeline: { src: '/media/audio/timeline.mp3', title: 'Know That You Are Loved' },
+  adventures: { src: '/media/audio/adventures.mp3', title: 'Adekunle Gold — Before You Wake Up' },
+  hard: { src: '/media/audio/hard.mp3', title: 'Sabrina Carpenter — We Almost Broke Up Again Last Night' },
+  puzzle: { src: '/media/audio/puzzle.mp3', title: 'John Legend ft Faouzia — Minefields' },
+  friends: { src: '/media/audio/friends.mp3', title: 'Thenigpen — Worth Living' },
+  letters: { src: '/media/audio/letters.mp3', title: 'Bill Withers — Just the Two of Us' },
+  message: { src: '/media/audio/message.mp3', title: 'Simi — Complete Me' },
+  proposal: { src: '/media/audio/proposal.mp3', title: 'Davido — 1 Milli' }
 }
 
 export const pageOrder = [

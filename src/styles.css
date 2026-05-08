@@ -883,6 +883,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 16px;
   cursor: pointer;
   transition: transform 0.5s var(--ease-cinematic);
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
 }
 
 .timeline__event:hover { transform: translateY(-4px); }
@@ -907,18 +911,44 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .timeline__card {
   width: 100%;
-  padding: 24px;
   background: rgba(245, 239, 230, 0.04);
   border: 1px solid rgba(201, 166, 107, 0.2);
   border-radius: 2px;
-  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
   transition: all 0.5s var(--ease-cinematic);
+  overflow: hidden;
 }
 
-.timeline__event:hover .timeline__card { border-color: var(--c-gold); background: rgba(245, 239, 230, 0.07); }
+.timeline__event:hover .timeline__card {
+  border-color: var(--c-gold);
+  background: rgba(245, 239, 230, 0.07);
+}
+
+.timeline__cardImg {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--c-oxblood-deep);
+}
+
+.timeline__cardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.4s var(--ease-cinematic);
+}
+
+.timeline__event:hover .timeline__cardImg img { transform: scale(1.05); }
+
+.timeline__cardText {
+  padding: 18px 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
 .timeline__card--oxblood { border-left: 3px solid var(--c-oxblood); }
 .timeline__card--sand { border-left: 3px solid var(--c-sand-dim); }
@@ -980,13 +1010,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   max-width: 640px;
   width: 100%;
-  padding: clamp(36px, 6vw, 60px);
+  padding: clamp(28px, 4vw, 40px);
   background: linear-gradient(180deg, rgba(245, 239, 230, 0.06), rgba(245, 239, 230, 0.02));
   border: 1px solid rgba(201, 166, 107, 0.3);
   cursor: default;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.timeline-modal__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  max-height: 60vh;
+  overflow: hidden;
+  background: var(--c-oxblood-deep);
+}
+
+.timeline-modal__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .timeline-modal__year {

@@ -5,21 +5,38 @@ import ContinueButton from './ContinueButton'
 
 function TimelineEvent({ event, onClick }) {
   return (
-    <div className="timeline__event" onClick={() => onClick(event)}>
+    <button
+      type="button"
+      className="timeline__event"
+      onClick={() => onClick(event)}
+      aria-label={`${event.year}: ${event.title}`}
+    >
       <div className={`timeline__card timeline__card--${event.color || 'sand'}`}>
-        <span className="timeline__year">{event.year}</span>
-        <span className="timeline__cardTitle">{event.title}</span>
-        <span className="timeline__cardBody">{event.body}</span>
+        {event.image && (
+          <div className="timeline__cardImg">
+            <img
+              src={event.image}
+              alt={`Kenny in ${event.year}`}
+              loading="lazy"
+              onError={(e) => { e.currentTarget.style.opacity = '0.3' }}
+            />
+          </div>
+        )}
+        <div className="timeline__cardText">
+          <span className="timeline__year">{event.year}</span>
+          <span className="timeline__cardTitle">{event.title}</span>
+          <span className="timeline__cardBody">{event.body}</span>
+        </div>
       </div>
       <div className="timeline__node" />
-    </div>
+    </button>
   )
 }
 
 export default function Timeline({ onCollectClue, collected, onContinue }) {
   const [active, setActive] = useState(null)
 
-  // Duplicate the events so the auto-scroll loop is seamless
+  // Duplicate so the auto-scroll loop is seamless
   const looped = [...timelineEvents, ...timelineEvents]
 
   return (
@@ -30,7 +47,7 @@ export default function Timeline({ onCollectClue, collected, onContinue }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
       >
-        <p className="eyebrow">Chapter Four · A life</p>
+        <p className="eyebrow">A Life</p>
         <h2 className="timeline__title">Kenny — <em>twenty-three years</em></h2>
         <p className="timeline__sub">
           From 2003 to right now. Hover to slow it down. Tap any year to step inside.
@@ -50,23 +67,17 @@ export default function Timeline({ onCollectClue, collected, onContinue }) {
         </div>
       </motion.div>
 
-      <p className="timeline__hint">hover to pause · click any to expand</p>
-
-      {/* Clue button for the timeline page */}
       <div style={{ display: 'flex', justifyContent: 'center', marginTop: '8px' }}>
-        <motion.button
+        <button
           type="button"
           onClick={onCollectClue}
           disabled={collected}
           className={`chapter__clue ${collected ? 'chapter__clue--collected' : ''}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
         >
           {collected
             ? `kept — ${extraClues.timeline}`
             : `keep ${extraClues.timeline}`}
-        </motion.button>
+        </button>
       </div>
 
       <AnimatePresence>
@@ -88,15 +99,14 @@ export default function Timeline({ onCollectClue, collected, onContinue }) {
               onClick={(e) => e.stopPropagation()}
             >
               <button className="timeline-modal__close" onClick={() => setActive(null)}>×</button>
+              {active.image && (
+                <div className="timeline-modal__img">
+                  <img src={active.image} alt={`Kenny in ${active.year}`} />
+                </div>
+              )}
               <span className="timeline-modal__year">{active.year}</span>
               <h3 className="timeline-modal__title">{active.title}</h3>
-              <p className="timeline-modal__body">
-                {active.body}
-                <br /><br />
-                <span style={{ color: 'var(--c-gold-soft)', fontSize: '14px', letterSpacing: '0.04em' }}>
-                  (we'll write this together as you tell me more.)
-                </span>
-              </p>
+              <p className="timeline-modal__body">{active.body}</p>
             </motion.div>
           </motion.div>
         )}
