@@ -333,9 +333,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   max-width: 52ch;
 }
 
-/* Two horizontally-scrolling rails of media — Video 5 reference */
+/* Two horizontally-scrolling rails of media — Video 5 reference.
+   Rails break out of the chapter padding to extend edge-to-edge of the viewport. */
 .chapter-v__rails {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -428,20 +431,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ──────────────────────────────────────────────────────────────────
    Split Chapter — Video 6 dual-panel layout (Her Beauty, Us)
+   Stage fills most of the viewport; head is a compact bar above.
    ─────────────────────────────────────────────────────────────── */
 .split {
   flex-direction: column;
   width: 100%;
-  padding: clamp(60px, 10vh, 100px) 0 clamp(80px, 12vh, 140px);
-  gap: clamp(40px, 6vw, 70px);
+  padding: 0;
+  gap: 0;
 }
 
 .split__head {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 0 var(--pad);
+  gap: 10px;
+  padding: clamp(28px, 4vh, 50px) var(--pad) clamp(14px, 2vh, 24px);
   max-width: 800px;
   margin: 0 auto;
 }
@@ -449,18 +453,18 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .split__title {
   font-family: var(--f-display);
   font-weight: 300;
-  font-size: clamp(44px, 8vw, 92px);
+  font-size: clamp(40px, 6.5vw, 72px);
   line-height: 0.95;
   letter-spacing: -0.025em;
   color: var(--c-cream);
 }
 .split__title em { font-family: var(--f-italic); font-style: italic; color: var(--c-gold); }
 
-/* The split-screen stage — two big panels side by side */
+/* The split-screen stage — two big panels side by side, fills most of viewport */
 .split__stage {
   position: relative;
   width: 100%;
-  height: clamp(420px, 70vh, 720px);
+  height: clamp(520px, 80vh, 900px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
@@ -627,7 +631,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .split__body {
   max-width: 640px;
   margin: 0 auto;
-  padding: 0 var(--pad);
+  padding: clamp(50px, 8vh, 100px) var(--pad) clamp(80px, 12vh, 140px);
   display: flex;
   flex-direction: column;
   align-items: center;

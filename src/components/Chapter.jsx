@@ -130,8 +130,6 @@ export default function Chapter({ chapter, onCollectClue, collected, onContinue 
         <MarqueeRow items={row2} onOpen={setPreview} direction="right" speed={Math.max(60, row2.length * 6)} />
       </motion.div>
 
-      <p className="chapter-v__rail-hint">hover to pause · tap any to open</p>
-
       <Lightbox item={preview} onClose={() => setPreview(null)} />
 
       <ContinueButton onClick={onContinue} />

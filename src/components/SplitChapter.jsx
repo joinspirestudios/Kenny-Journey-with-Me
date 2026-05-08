@@ -169,8 +169,6 @@ export default function SplitChapter({ chapter, onCollectClue, collected, onCont
         </button>
       </motion.div>
 
-      <p className="split__hint">click a thumb to swap into the big panel · double-click to open fullscreen · click either big panel for fullscreen</p>
-
       <motion.div
         className="split__body"
         initial={{ opacity: 0, y: 20 }}
