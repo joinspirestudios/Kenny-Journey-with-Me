@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import Intro from './components/Intro'
 import Chapter from './components/Chapter'
 import SplitChapter from './components/SplitChapter'
@@ -123,6 +124,7 @@ export default function App() {
 
       {/* Audio is always on. On iOS, the pill shows "tap to play music" until first tap. */}
       <AudioController enabled={true} pageKey={current.key} />
+      <Analytics />
     </div>
   )
 }
