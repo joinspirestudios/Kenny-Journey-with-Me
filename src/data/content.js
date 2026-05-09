@@ -121,10 +121,10 @@ export const chapters = [
     title: 'The <em>hard</em> ones',
     body: [
       "There were days I wasn't sure we would make it through the next week. This collection is filled with our first fight. The first time we didn't know if we were going to make it. The version of us in 2023 that didn't.",
-      "And here we are anyway. Not Perfect Yet, honest, still choosing this. The fights aren't the story. The coming back is."
+      "And here we are anyway. Not Perfect Yet, but honestly, still choosing this. The fights aren't the story. The Constant improving to get to the future we want Is Our Story."
     ],
     closingLine: "Our Love isn't the absence of hard nights. It's the courage to keep building ourselves to where we want that counts.",
-    date: "The ones we don't talk about and the one tonight",
+    date: "The ones we don't talk about and the saddest one week of our lives",
     media: [
       img('/media/hard/last-date-2023-1-before-we-broke-up-the-first-time.jpg', 'Last date, 2023 — before we broke up the first time'),
       img('/media/hard/last-date-2023-2-before-we-broke-up-the-first-time.jpg', ''),
@@ -236,22 +236,22 @@ export const friends = [
 ]
 
 export const herLetters = [
-  { id: 1, excerpt: 'placeholder — drop a scan or paste an excerpt', date: '2025', color: 'sand', tilt: -4 },
-  { id: 2, excerpt: 'her words, in her hand', date: '2025', color: 'cream', tilt: 3 },
-  { id: 3, excerpt: 'kept on your nightstand', date: '2025', color: 'oxblood', tilt: -2 },
-  { id: 4, excerpt: 'add as many as you have', date: '2025', color: 'sand', tilt: 5 }
+  { id: 1, excerpt: 'placeholder — not yet available', date: '2025', color: 'sand', tilt: -4 },
+  { id: 2, excerpt: 'not yet available', date: '2025', color: 'cream', tilt: 3 },
+  { id: 3, excerpt: 'not yet available', date: '2025', color: 'oxblood', tilt: -2 },
+  { id: 4, excerpt: 'not yet available', date: '2025', color: 'sand', tilt: 5 }
 ]
 
 export const longMessage = {
-  eyebrow: 'For Awesome Kenny — read slowly',
+  eyebrow: 'For Awesome Kenny read slowly',
   title: 'Everything I should have said <em>out loud</em>',
   paragraphs: [
     "Hey Baby, Hey Pineapple, Hi My Love.",
-    "Happy 1 Year Anniversary to Us Baby. This year has been filled with a rollercoaster of emotions — Joy, Laughter, Tears, Sadness, Happiness, Dreams, Ups, Downs, Efforts and Results — and We were with each other through it all. We have supported and patted each other on the back and put each other together. Thank You Baby.",
-    "I don't know if I've told you this before, but one interesting thing that stood out early on to me in our relationship is you actively introducing me to everyone you know. It showed me how much you were proud of me and us being together, and that has been my constant motivating reminder that I can't let you down, I can't let us down. And to say I'm proud of you is a freaking understatement — I wanna shout you out on the biggest global stage. I'm so much more proud of all you are Baby, and to the ends of the earth, I want to support you to make sure that bigger than you imagine to achieve, you get it. PS: I told you on your birthday you are getting to 200k followers by the end of this year — hi, I hope you're counting down.",
+    "Happy 1 Year Anniversary to Us Baby. This year has been filled with a rollercoaster of emotions Joy, Laughter, Tears, Sadness, Happiness, Dreams, Ups, Downs, Efforts and Results and We were with each other through it all. We have supported and patted each other on the back and put each other together. Thank You Baby.",
+    "I don't know if I've told you this before, but one interesting thing that stood out early on to me in our relationship is you actively introducing me to everyone you know. It showed me how much you were proud of me and us being together, and that has been my constant motivating reminder that I can't let you down, I can't let us down. And to say I'm proud of you is a freaking understatement I wanna shout you out on the biggest global stage. I'm so much more proud of all you are Baby, and to the ends of the earth, I want to support you to make sure that bigger than you imagine to achieve, you get it. PS: I told you on your birthday you are getting to 200k followers by the end of this year hi, I hope you're counting down.",
     "Baby you've been with me at my lowest, and I wanna take you together with Me to the Peak of Life. We Will Win. We Are Not Losers. We Have Not Come This Far To Lose, Neither Have We Come This Far To Settle. You Will Win. I Will Win. and We would be Great Together.",
-    "Honestly, More than I can currently appreciate and reciprocate, Thank You so much Babe — for all the support, love, emotional comfort and even entertaining all my ambitious ideas. I promise you that in this new phase of our life I shall execute more radically and we will win and get to our 500m/year faster. Thank You so much for being there for me, for us, for trusting Me, for riding with Me. Thank You for Committing to the first year, and Looking forward to the greatness we achieve in this new phase of our relationship.",
-    "Hey Baby, oh Sorry — Hey Gym Partner, we are hitting the gym back and I promise to be the gym buddy you want in a partner. In This New Phase I'll work harder to make sure I can fully accommodate all your taste and even give you much better taste — More Trips, More Vacations, and shaking Your ass on a Yacht. This is that Year for Us Baby.",
+    "Honestly, More than I can currently appreciate and reciprocate, Thank You so much Babe for all the support, love, emotional comfort and even entertaining all my ambitious ideas. I promise you that in this new phase of our life I shall execute more radically and we will win and get to our 500m/year faster. Thank You so much for being there for me, for us, for trusting Me, for riding with Me. Thank You for Committing to the first year, and Looking forward to the greatness we achieve in this new phase of our relationship.",
+    "Hey Baby, oh Sorry, Hey Gym Partner, we are hitting the gym back and I promise to be the gym buddy you want in a partner. In This New Phase I'll work harder to make sure I can fully accommodate all your taste and even give you much better taste More Trips, More Vacations, and shaking Your ass on a Yacht. This is that Year for Us Baby.",
     "Hey Pineapple, Thank You So Much for sharing a Chapter of Life with Me. Looking forward to our new Phase Of Life together Baby."
   ],
   signoff: '— Always, Joseph, Your Badiraaa.',
