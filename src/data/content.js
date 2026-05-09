@@ -236,7 +236,17 @@ export const friends = [
 ]
 
 export const herLetters = [
-  { id: 1, excerpt: 'Roses are red, Violets are blue. You deserve so much more, Because I LOVE YOU! -Your Baby.', date: '2025', color: 'sand', tilt: -4 },
+  {
+  id: 1,
+  excerpt: `Roses are red,
+Violets are blue.
+You deserve so much more,
+Because I LOVE YOU!
+                          -Your Baby`,
+  date: '2025',
+  color: 'sand',
+  tilt: -4
+},
   { id: 2, excerpt: 'not yet available', date: '2025', color: 'cream', tilt: 3 },
   { id: 3, excerpt: 'not yet available', date: '2025', color: 'oxblood', tilt: -2 },
   { id: 4, excerpt: 'not yet available', date: '2025', color: 'sand', tilt: 5 }
