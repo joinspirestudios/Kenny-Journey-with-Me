@@ -1,4 +1,4 @@
-# For Kenny — Year One
+# For Kenny Year One With Me
 
 A 13-page interactive anniversary site. Inspired by Blank Studio's restraint:
 massive serif type, slow motion, intentional space.
